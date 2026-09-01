@@ -2,31 +2,13 @@
 
 This guide explains how to run a Python application as a non-root user and automatically start it whenever the server reboots.
 
----
-
-## Prerequisites
-
-- Linux server (Ubuntu, RHEL, Amazon Linux, etc.)
-- Python installed
-- Sudo access
-
----
-
 ## Step 1: Create a Non-Root User
 
 Create a dedicated user for running the application.
 
 ```bash
-sudo useradd -m appuser
+sudo useradd --system --no-create-home appuser
 ```
-
-Verify the user:
-
-```bash
-id appuser
-```
-
----
 
 ## Step 2: Place the Application
 
