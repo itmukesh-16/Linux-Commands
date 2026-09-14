@@ -4,7 +4,11 @@ sudo chown -R appuser:appuser /opt/myapp
 
 sudo vi /etc/systemd/system/myapp.service
 
+who -user
+which pyhton - python location 
+pwd
 
+=========================================================
 [Unit]
 Description=My Application
 After=network.target
@@ -20,10 +24,14 @@ RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
-
+========================================================================
 
 sudo systemctl daemon-reload
+
 sudo systemctl enable myapp
+
 sudo systemctl start myapp
+
 sudo systemctl status myapp
+
 sudo journalctl -u myapp -f
